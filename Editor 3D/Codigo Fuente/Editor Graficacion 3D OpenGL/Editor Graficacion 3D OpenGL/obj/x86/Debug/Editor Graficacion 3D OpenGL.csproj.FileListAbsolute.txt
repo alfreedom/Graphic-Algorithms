@@ -1,0 +1,11 @@
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\bin\Debug\Editor Graficacion 3D OpenGL.exe
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\bin\Debug\Editor Graficacion 3D OpenGL.pdb
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\obj\x86\Debug\Editor_Graficacion_3D_OpenGL.Form1.resources
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\obj\x86\Debug\Editor_Graficacion_3D_OpenGL.Properties.Resources.resources
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\obj\x86\Debug\Editor Graficacion 3D OpenGL.exe
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\obj\x86\Debug\Editor Graficacion 3D OpenGL.pdb
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\obj\x86\Debug\Editor_Graficacion_3D_OpenGL.Opciones.resources
+C:\Users\Alfredo\Documents\Visual Studio 2010\Projects\Editor Graficacion 3D OpenGL\Editor Graficacion 3D OpenGL\obj\x86\Debug\Editor_Graficacion_3D_OpenGL.Giros.resources

@@ -1,0 +1,17 @@
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\bin\Debug\Editor Graficación 2D.exe
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\bin\Debug\Editor Graficación 2D.pdb
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\bin\Debug\Tao.OpenGl.dll
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\bin\Debug\Tao.Platform.Windows.dll
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\bin\Debug\Tao.OpenGl.xml
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\bin\Debug\Tao.Platform.Windows.xml
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\Editor_Graficación_2D.DialogRotar.resources
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\Editor_Graficación_2D.Properties.Resources.resources
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\GenerateResource-ResGen.read.7.tlog
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\Editor Graficación 2D.exe
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\Editor Graficación 2D.pdb
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\bin\Debug\Editor Graficación 2D.XML
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\Editor_Graficación_2D.About.resources
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\Editor_Graficación_2D.Principal.resources

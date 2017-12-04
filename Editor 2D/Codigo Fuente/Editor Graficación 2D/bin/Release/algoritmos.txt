@@ -1,0 +1,103 @@
+
+
+****************ELIPSE***************************
+
+private void CalculaElipse(int _ra, int _rb, Point _pi, Point _pf)
+        {
+            List<Point> listaux= new List<Point>();
+            double d0;
+            int ra2, rb2, x, y;
+            ra2=_ra*_ra;
+            rb2=_rb*_rb;
+            x=0;
+            y=_rb;
+            d0 = rb2 - (ra2 * _rb) + (ra2 / 4);
+	    _origen=_pi;
+
+            
+            while ((ra2 * (y - .5)) > (rb2 * (x + 1)))
+            {
+                if (d0 > 0)
+                {
+                    listaux.Add(new Point(++x, --y));
+                    d0 = d0 + (rb2 * (2 * x + 3) + ra2 * (-2 * y + 2));
+                }
+                else
+                {
+                    listaux.Add(new Point(++x, y));
+                    d0 = d0 + (rb2 * (2 * x + 3) );
+                }
+            }
+            x++;
+            d0 = (rb2 * x) + (ra2 * 2 * y) + (rb2 / 4) + ra2;
+            
+            while (y != 0)
+            {
+                if (d0 > 0)
+                {
+                    listaux.Add(new Point(x, --y));
+                    d0 = d0 + ((-2 * ra2 * y) + (3 * ra2));
+                }
+                else
+                {
+                    listaux.Add(new Point(++x, --y));
+                    d0 = d0 + (rb2 * (2 * x + 2) + ra2 * (-2 * y + 3));
+                }
+            }
+
+            _listPixeles.Add(new Point(_origen.X,_origen.Y- _rb));
+            _listPixeles.Add(new Point(_origen.X, _origen.Y + _rb));
+            foreach (Point p in listaux)
+            {
+                _listPixeles.Add(new Point(_origen.X + p.X, _origen.Y - p.Y));
+                _listPixeles.Add(new Point(_origen.X - p.X, _origen.Y - p.Y));
+                _listPixeles.Add(new Point(_origen.X - p.X, _origen.Y + p.Y));
+                _listPixeles.Add(new Point(_origen.X + p.X, _origen.Y + p.Y));
+            }
+        }
+       
+
+*****************************************************************************************
+**********************************CURVA HERMITE******************************************
+     private void CalculaHermite(Point _pi, Point _pf, Point _control_1, Point _control_2)
+        {
+            Point p=new Point();
+            for (double u = 0; u < 1; u += .0001)
+            {
+                    //calculamos los puntos con la matriz de hermite.
+                    p.X = (int)((_pi.X * (2 * Math.Pow(u, 3) - 3 * Math.Pow(u, 2) + 1)) + (_pf.X * (-2 * Math.Pow(u, 3) + 3 * Math.Pow(u, 2)))
+                          + (_control_1.X * (Math.Pow(u, 3) - 2* Math.Pow(u, 2) + u)) + (_control_2.X * (Math.Pow(u, 3) - Math.Pow(u, 2))));
+
+                    p.Y = (int)((_pi.Y * (2 * Math.Pow(u, 3) - 3 * Math.Pow(u, 2) + 1)) + (_pf.Y * (-2 * Math.Pow(u, 3) + 3 * Math.Pow(u, 2)))
+                          + (_control_1.Y * (Math.Pow(u, 3) -  2*Math.Pow(u, 2) + u)) + (_control_2.Y * (Math.Pow(u, 3) - Math.Pow(u, 2))));
+        
+               
+                _listPixeles.Add(p);
+            }
+            _listPixeles.Add(_pi);
+            _listPixeles.Add(_pf);
+        }
+
+*****************************************************************************************
+********************************CURVA BEZIER*********************************************
+   private void CalculaBezier(Point _pi, Point _pf, Point _control_1, Point _control_2)
+        {
+            Point p=new Point();
+            for (double u = 0; u < 1; u += .0005)
+            {
+                
+                        //calculamos puntos con la matriz de bezier
+                        p.X = (int)((_pi.X * (Math.Pow(-u, 3) + 3 * Math.Pow(u, 2) - 3 * u + 1)) + (_control_1.X * (3 * Math.Pow(u, 3) - 6 * Math.Pow(u, 2) + 3*u))
+                              + (_control_2.X * (-3 * Math.Pow(u, 3) + 3 * Math.Pow(u, 2) )) + (_pf.X * (Math.Pow(u, 3))));
+
+                        p.Y = (int)((_pi.Y * (Math.Pow(-u, 3) + 3 * Math.Pow(u, 2) - 3 * u + 1)) + (_control_1.Y * (3 * Math.Pow(u, 3) - 6 * Math.Pow(u, 2) + 3*u))
+                              + (_control_2.Y * (-3 * Math.Pow(u, 3) + 3 * Math.Pow(u, 2) )) + (_pf.Y * (Math.Pow(u, 3))));
+               
+                    
+                _listPixeles.Add(p);
+            }
+            _listPixeles.Add(_pi);
+            _listPixeles.Add(_pf);
+        }
+
+********************************************************************************************

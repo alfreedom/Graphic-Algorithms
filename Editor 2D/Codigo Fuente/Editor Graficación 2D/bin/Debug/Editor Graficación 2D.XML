@@ -1,0 +1,1272 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Editor Graficación 2D</name>
+    </assembly>
+    <members>
+        <member name="M:Editor_Graficación_2D.Program.Main">
+             <summary>
+            Punto de partida de la aplicacion.
+             </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.About">
+            <summary>
+            Crea un cuadro de dialogo que muestra informacion sobre el
+            proyecto.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.About.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.About.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.About.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.About.#ctor">
+            <summary>
+            Crea un nuevo cuadro de dialogo.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.About.BTAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cierra el cuadro de dialogo al dar click en el boton Aceptar.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Editor_Graficación_2D.Linea">
+            <summary>
+            Clase para crear, manipular y dibujar una Linea.
+            </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.Figura">
+            <summary>
+            Clase abstracta que contiene metodos y atributos comunes
+            para las figuras.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Figura._color">
+            <summary>
+            Guarda el color de la figura.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Figura._tipo">
+            <summary>
+            Guarda el tipo de figura.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Figura._grosor">
+            <summary>
+            Guarda el grosor de Linea de la figura.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Figura._estilo">
+            <summary>
+            Guarda el estilo de linea de la figura.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Figura._listPixeles">
+            <summary>
+            Guarda la lista de puntos que conforman a la figura.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Figura.#ctor(System.Drawing.Color,Editor_Graficación_2D.Figura.Tipo,System.Int32)">
+            <summary>
+            Constructor de la clase figura.
+            </summary>
+            <param name="Color">Color de la figura.</param>
+            <param name="Tipo">Tipo de la Figura.</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Figura.Dibuja">
+            <summary>
+            Dibuja los pixeles que componen la figura.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Figura.PointInFig(System.Drawing.Point,System.Int32)">
+            <summary>
+            Checa si un punto se encuentra en la figura.
+            </summary>
+            <param name="pt">Punto a checar.</param>
+            <param name="range">Rango de alcanze.</param>
+            <returns>Regresa un valor diferente de 0 dependiendo de la figura.</returns>
+        </member>
+        <member name="M:Editor_Graficación_2D.Figura.PutPixel(System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Dibuja un pixel en las coordenadas X y Y especificas.
+            </summary>
+            <param name="x">Coordenada X del pixel.</param>
+            <param name="y">Coordenada Y del pixel</param>
+            <param name="color">Color del Pixel.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Figura.Rota(System.Int32)">
+            <summary>
+            Rota la figura en cierto angulo.
+            </summary>
+            <param name="Grados">Numero de grados que la figura se rotara.</param>
+        </member>
+        <member name="P:Editor_Graficación_2D.Figura.Color">
+            <summary>
+            Obtiene o establece el color de la figura.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Figura.TipoFigura">
+            <summary>
+            Obtiene el tipo de figura.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Figura.Grosor">
+            <summary>
+            Obtiene o establece el grosor de la linea.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Figura.Estilo">
+            <summary>
+            Obtiene o establece el Estilo de la linea.
+            </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.Figura.Tipo">
+            <summary>
+            Enumeracion que contiene los tipos de figura.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Linea._pi">
+            <summary>
+            Guarda el punto inicial de la Linea.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Linea._pf">
+            <summary>
+            Guarda el punto el punto final de la Linea
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Linea._dx">
+            <summary>
+            Guarda la delta X para calcular los puntos de la Linea.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Linea._dy">
+            <summary>
+            Guarda la delta Y para calcular los puntos de la Linea.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Linea._d0">
+            <summary>
+            Guarda la delta nueva para calcular los puntos de la Linea.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Linea._pendiente">
+            <summary>
+            Guarda la pendiente de la Linea.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Xi">X inicial de la linea</param>
+            <param name="Yi">Y inicial de la linea</param>
+            <param name="Xf">X final de la linea</param>
+            <param name="Yf">Y final de la linea</param>
+            <param name="Color">Color de la linea</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Pi">Punto inicial de la linea.</param>
+            <param name="Pf">Punto final de la linea.</param>
+            <param name="Color">Color de la linea</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.CalculaPixeles">
+            <summary>
+            Calcula los pixeles que componen la linea.
+            Se utiliza el algoritmo de Breseham.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.BresehamE_NE">
+            <summary>
+            Agoritmo de Bresenham para el segmento E-NE
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.BresehamE_SE">
+            <summary>
+            Agoritmo de Bresenham para el segmento E-SE
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.BresehamN_NE">
+            <summary>
+            Agoritmo de Bresenham para el segmento N-SE
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.BresehamS_SE">
+            <summary>
+            Agoritmo de Bresenham para el segmento S-SE
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.Dibuja">
+            <summary>
+            Dibuja los pixeles que componene la Linea.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.PointInFig(System.Drawing.Point,System.Int32)">
+            <summary>
+            Checa si un punto esta en la figura.
+            </summary>
+            <param name="pt">Punto a checar.</param>
+            <param name="range">Rango de alcanze</param>
+            <returns>1 si el punto esta cerca ó en el primer punto de la linea,
+            o 2 si el punto esta cerca ó en el segundo punto de la linea o 3 si
+            si el punto esta en cualquier otra parte de la linea
+            de lo contrario regresa 0.</returns>
+        </member>
+        <member name="M:Editor_Graficación_2D.Linea.ClearPixeles">
+            <summary>
+            Borra la lista de pixeles que componen la Linea.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Linea.PI">
+            <summary>
+            Obtiene o establece el punto inicial de la linea.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Linea.PF">
+            <summary>
+            Obtiene o establece el punto final de la linea.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Linea.XI">
+            <summary>
+            Obtiene o establece la coordenada X del primer punto de la linea.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Linea.YI">
+            <summary>
+            Obtiene o establece la coordenada Y del primer punto de la linea.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Linea.XF">
+            <summary>
+            Obtiene o establece la coordenada X del segundo punto de la linea.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Linea.YF">
+            <summary>
+            Obtiene o establece la coordenada Y del segundo punto de la linea.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Linea.Pixeles">
+            <summary>
+            Obtiene la lista de pixeles que componen la linea.
+            </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.Curva">
+            <summary>
+            Clase que crea, manipula y dibuja una Curva.
+            La curva puede ser una Curva de Hermitte, o una Curva de Bezier.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Curva._pi">
+            <summary>
+            Guarda el punto inicial de la Curva.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Curva._pf">
+            <summary>
+            Guarda el punto final de la Curva.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Curva._control_1">
+            <summary>
+            Guarda el punto de control 1 de la Curva.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Curva._control_2">
+            <summary>
+            Guarda el punto de control 2 de la Curva.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Curva.l1">
+            <summary>
+            Guarda las lineas para dibujar la posicion de los puntos de control.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Curva.l2">
+            <summary>
+            Guarda las lineas para dibujar la posicion de los puntos de control.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Curva.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,Editor_Graficación_2D.Figura.Tipo,System.Int32)">
+            <summary>
+            Contructor de la Clase Curva
+            </summary>
+            <param name="PI">Punto inicial de la curva.</param>
+            <param name="PF">Punto final de la curva.</param>
+            <param name="Color">Color de la Curva.</param>
+            <param name="Tipo">Tipo de curva.</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Curva.CalculaPixeles">
+            <summary>
+            Calcula los pixeles de la curva dependiendo del tipo de curva, que puede ser
+            la Curva de Hermite o la Curva de Bezier
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Curva.Dibuja">
+            <summary>
+            Dibuja los pixeles que componene la Curva.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Curva.DibujaControles">
+            <summary>
+            Dibuja las referencia a los puntos de control.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Curva.PointInFig(System.Drawing.Point,System.Int32)">
+            <summary>
+            Verifica si un puto esta en la Curva.
+            </summary>
+            <param name="pt">Punto a Checar.</param>
+            <param name="range">Rango de alcanze.</param>
+            <returns>Regresa 1 si el punto esta cerca ó en el punto inicial, 2 si esta cerca ó en el punto final
+            ,3 si esta cerca ó en el punto de control 1, 4 si esta cerca ó en el punto de control 2 y 5 si
+            esta en cualquier otra parte de la curva, de lo contrario regresa 0.</returns>
+            
+        </member>
+        <member name="M:Editor_Graficación_2D.Curva.ClearPixeles">
+            <summary>
+            Borra la lista de pixeles que componen la Curva.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Curva.PI">
+            <summary>
+            Obtiene o establece el punto inicial de la Curva.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Curva.PF">
+            <summary>
+            Obtiene o establece el punto fina de la Curva.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Curva.PCTRL1">
+            <summary>
+            Obtiene o establece el punto de control 1 de la Curva.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Curva.PCTRL2">
+            <summary>
+            Obtiene o establece el punto de control 2 de la Curva.
+            </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.DialogRotar">
+            <summary>
+            Esta clase crea un cuadro de dialogo que pide un angulo
+            para aplicar la transformación de rotación.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.DialogRotar.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.DialogRotar.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.DialogRotar.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.DialogRotar.#ctor">
+            <summary>
+            Crea un nuevo cuadro de dialogo de rotacion.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.DialogRotar.Grados">
+            <summary>
+            Regresa el numero de grados seleccionado.
+            </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.Circulo">
+            <summary>
+            Clase para crear, manipular y dibujar un Circulo.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Circulo._origen">
+            <summary>
+            Guarda el punto de origen del Circulo.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Circulo._radio">
+            <summary>
+            Guarda el radio del Circulo.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Circulo.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32)">
+            <summary>
+            Constructor de la clase Circulo.
+            </summary>
+            <param name="PI">Punto inicial del Circulo (origen).</param>
+            <param name="PF">Punto final del Circulo.</param>
+            <param name="Color">Color del Circulo.</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Circulo.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            Constructor de la clase Circulo.
+            </summary>
+            <param name="XI">Coordenada X inicial del circulo (Coordenada X del origen).</param>
+            <param name="YI">Coordenada Y inicial del circulo (Coordenada Y del origen).</param>
+            <param name="XF">Coordenada X final del circulo.</param>
+            <param name="YF">Coordenada Y final del circulo.</param>
+            <param name="Color">Color del Circulo</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Circulo.#ctor(System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            Constructor de la clase Circulo.
+            </summary>
+            <param name="x">Coordenada X inicial del circulo (Coordenada X del origen).</param>
+            <param name="y">Coordenada Y inicial del circulo (Coordenada Y del origen).</param>
+            <param name="Radio">Radio del Circulo.</param>
+            <param name="Color">Color del Circulo.</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Circulo.#ctor(System.Drawing.Point,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            Constructor de la clase Circulo.
+            </summary>
+            <param name="Origen">Punto del origen del Circulo.</param>
+            <param name="Radio">Radio del Circulo.</param>
+            <param name="Color">Color del Circulo.</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Circulo.CalculaPixeles">
+            <summary>
+            Calcula los pixeles a pintar mediante el algoritmo del Circulo.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Circulo.Dibuja">
+            <summary>
+            Dibuja los pixeles que componene el Circulo.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Circulo.PointInFig(System.Drawing.Point,System.Int32)">
+            <summary>
+            Checa si un punto esta en el Circulo.
+            </summary>
+            <param name="pt">Punto a checar.</param>
+            <param name="range">Rango de alcanze</param>
+            <returns>1 si el punto esta cerca o en el origen o 2 si el punto
+            esta cerca o en la circunferencia, de lo contrario regresa 0.</returns>
+        </member>
+        <member name="M:Editor_Graficación_2D.Circulo.ClearPixeles">
+            <summary>
+            Borra la lista de pixeles que componen el circulo.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Circulo.Radio">
+            <summary>
+            Obtiene o establece el radio del Circulo.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Circulo.Origen">
+            <summary>
+            Obtiene o establece el punto de origen del Circulo.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Circulo.Pixeles">
+            <summary>
+            Obtiene la lista de pixeles que componen el Circulo.
+            </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.Pixel">
+            <summary>
+            Clase que crea, manipula y dibuja un Pixel.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Pixel._point">
+            <summary>
+            Guarda las coordenadas del pixel.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Pixel.#ctor(System.Drawing.Point,System.Drawing.Color,System.Int32)">
+            <summary>
+            Constructor de la clase pixel.
+            </summary>
+            <param name="p">Punto del Pixel.</param>
+            <param name="Color">Color del Pixel.</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Pixel.#ctor(System.Int32,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            Contructor de la Clase Pixel
+            </summary>
+            <param name="x">Coordenada X del Pixel.</param>
+            <param name="y">Coordenada Y del Pixel.</param>
+            <param name="Color">Color del Pixel.</param>
+            <param name="Ancho">Ancho del Pixel</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Pixel.Dibuja">
+            <summary>
+            Dibuja el Pixel.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Pixel.PointInFig(System.Drawing.Point,System.Int32)">
+            <summary>
+            Checa si un punto determinado esta cerca del Pixel.
+            </summary>
+            <param name="pt">Punto a checar.</param>
+            <param name="range">Rango de acercamiento.</param>
+            <returns>Regresa 1 si esta cerca ó en el Pixel, de lo contrario
+            regresa 0.</returns>
+        </member>
+        <member name="P:Editor_Graficación_2D.Pixel.Location">
+            <summary>
+            Devuelve o establece la posicion del Pixel.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Pixel.X">
+            <summary>
+            Obtiene o establece la coordenada X del pixel.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Pixel.Y">
+            <summary>
+            Obtiene o establece la coordenada Y del pixel.
+            </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.Properties.Resources">
+            <summary>
+              Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Properties.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+            </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.Principal">
+            <summary>
+            Clase principal del formulario.
+            En esta clase se manipulan las acciones para la selección, edición,
+            y dibujado de las figuras, ya sea mediante el teclado o el ratón.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal.RANGO">
+            <summary>
+            Guarda el rango para la busqueda de un punto en un figura.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal.guardado">
+            <summary>
+            Bandera para saber si el dibujo se ha guardado.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal.nomarch">
+            <summary>
+            Guarda el nombre del archivo abierto.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._op">
+            <summary>
+            Guarda la opcion seleccionada por el usuario.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._pixelcolor">
+            <summary>
+            Guarda el color primario para dibujar.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._p1">
+            <summary>
+            Guarda el punto del raton al dar click.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._p2">
+            <summary>
+            Guarda el punto cada que se desplaza el mouse.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._listaFiguras">
+            <summary>
+            Guarda las figuras creadas en una lista de figuras.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._figura">
+            <summary>
+            Guarda la figura actual, para el efecto de arrastre.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._ptresult">
+            <summary>
+            Guarda el resultado de la llamada a la funcion
+            PointInFig(Point p, int Range), que depende de
+            la figura checada.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._indicepaleta">
+            <summary>
+            Guarda el indice de la paleta activa que se
+            esta vsualizando.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._listapaletas">
+            <summary>
+            Guarda las paletas de colores.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._oldcursor">
+            <summary>
+            Guarda el cursor del mouse que estaba activo
+            antes de modificarlo.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._radio">
+            <summary>
+            Guarda el radio ya sea de un Circulo o de una Elipse.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._ancholinea">
+            <summary>
+            Guarda el ancho de linea para crear las figuras.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._estilolinea">
+            <summary>
+            Guarda el estilo de linea para crear las figuras.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal._gradosarotar">
+            <summary>
+            Guarda los grados que se debe rotar una figura.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.#ctor">
+            <summary>
+            Constructor del formulario principal.
+            Se inicializan todos los componentes de la aplicación.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.Form1_Load(System.Object,System.EventArgs)">
+            <summary>
+            Se carga el formulario y se inicializan todas las variables.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.CargaPaletas">
+            <summary>
+            Carga las imagenes de las paletas en una lista.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.pixelToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opccion para dibujar un pixel.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.lineaToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opcion para dibujar una linea.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.circuloToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opcion para dibujar un circulo.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.elipseToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opcion para dibujar un Elipse.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.curvaDeHermiteToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opcion para dibujar una Curva de Hermite.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.cambiarColorToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opcion para cambiar el color de la figura.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.moverToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opcion para mover la figura.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.borrarFiguraToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opcion para borrar una figura.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.curvaDeBezierToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opcion para dibujar una Curva de Bezier.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.colorDePixelToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona el color del pixel mediante un cuadro de dialogo de color.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.limpiaPantallaToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Limpia la pantalla y elimina las figuras.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.ActivaOpcionMenu">
+            <summary>
+            Activa visualmente la opción actual.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.invertirColorDeFondoToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Invierte el color de fondo de blanco a negro y viceverza.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.DibujaFiguras">
+            <summary>
+            Dibuja todas las figuras que haya en la lista de figuras.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.DibujaOrigenes">
+            <summary>
+            Dibuja las marcas de los origenes de la figura para aplicar transformaciones.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.GetColor">
+            <summary>
+            Regresa el color seleccionado en el cuadro de dialogo de color.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.GIOpengl_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Se produce cuando el se da click en el objeto GL.
+            Sirve para inicializar las coordenadas iniciales de
+            la figura seleccionada, para cambiar el color de alguna
+            figura o para obtener las coordenadas de una figura respecto
+            al mouse.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.GIOpengl_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Se produce cuando se mueve el mouse en el objeto GL.
+            Sirve para dibujar con arraste, mover, cambiar color,
+            escalar y rotar las figuras.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.GIOpengl_MouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Se produce cuando se levanta el boton de mouse en el objeto GL.
+            Se utiliza para finalizar el pintado de una figura y agregarlo
+            a la lista de figuras.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.GIOpengl_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Se produce cuando el objeto GL necesita pintarse.
+            Se inicializa el pintado OpenGL, se dibujan las figuras y
+            se finaliza el pintado.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.PB_color1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando se da click en el PictureBox de color primario.
+            El color primario se establece igual que al del PictureBox.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.PB_color2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando se da click en el PictureBox de color secundario.
+            El color secundario se establece igual que al del PictureBox.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.PB_colordefault_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando se da click en el PictureBox de colores por default.
+            Se establece el color primario como negro y el secundario como blanco.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.PB_invertircolor_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando se da click en el PictureBox de invertir color.
+            invierta el color primario por el secundario y viceverza.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.PB_paletalateral_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Se produce cuando se mueve el raton en el PictureBox de la paleta lateral.
+            si se da click izquierdo en el, se establece el color primario con el color
+            de las coordenadas X y Y, si se da click derecho, el color secundario
+            es establecido.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.GetPixelPictureBox(System.Windows.Forms.PictureBox,System.Drawing.Point)">
+            <summary>
+            Regresa el pixel seleccionado por las coordenadas X y Y del mouse
+            cuando se da click en algun PictureBox.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.PB_paletalateral_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Se produce cuando se da click en el PictureBox de la paleta lateral.
+            Obtiene el color seleccionado por las coordenadas del mouse en la 
+            paleta lateral.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.PB_paleta_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Se produce cuando se mueve el raton en el PictureBox de la paleta principal.
+            si se da click izquierdo en el, se establece el color primario con el color
+            de las coordenadas X y Y, si se da click derecho, el color secundario
+            es establecido.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.PB_paleta_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Se produce cuando se da click en el PictureBox de la paleta.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_paletaleft_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando se da click en el boton de direccion izquierda
+            de la paleta, y cambia la paleta actual por otra establecida en
+            la lista de paletas.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_paletaright_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando se da click en el boton de direccion derecha
+            de la paleta, y cambia la paleta actual por otra establecida en
+            la lista de paletas.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_pixel_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de pixel.
+            Se cambia la imagen para dar un efecto de seleccion.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_pixel_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de pixel.
+            Reestablece la imagen original.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_line_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de Linea.
+            Se cambia la imagen para dar un efecto de selección.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_line_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de Linea.
+            Reestablece la imagen original.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_move_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de Mover.
+            Se cambia la imagen para dar un efecto de selección.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_move_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de Mover.
+            Reestablece la imagen original.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_circle_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de Circulo.
+            Se cambia la imagen para dar un efecto de selección.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_circle_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de Circulo.
+            Reestablece la imagen original.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_cambiacolor_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de Cambiar Color.
+            Se cambia la imagen para dar un efecto de selección.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_cambiacolor_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de Cambiar Color.
+            Reestablece la imagen original.
+            </summary> 
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_elipse_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de Elipse.
+            Se cambia la imagen para dar un efecto de selección.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_elipse_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de Elipse.
+            Reestablece la imagen original.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_hermite_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de Curva de Hermite
+            Se cambia la imagen para dar un efecto de selección.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_hermite_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de Curva de Hermite.
+            Reestablece la imagen original.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_bezier_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de Curva de Bezier.
+            Se cambia la imagen para dar un efecto de selección.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_bezier_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de Curva de Bezier.
+            Reestablece la imagen original.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_delete_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de Eliminar Figura.
+            Se cambia la imagen para dar un efecto de selección.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_delete_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de Eliminar Figura.
+            Reestablece la imagen original.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_pixel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para dibujar un Pixel.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_line_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para dibujar una Linea.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_move_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para mover figuras.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_circle_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para dibujar un circulo.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_elipse_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para dibujar una elipse.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_cambiacolor_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para cambiar el color de las figuras.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_hermite_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para dibujar una curva de hermite.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_delete_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para eliminar una figura.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_bezier_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para dibujar una curva de bezier.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.NUD_grosor_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando cambia el valor del ancho de linea,
+            guardando el nuevo valor.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.salirToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se produce al salir de la aplicacion.
+            Si no se ha guardado el dibujo, pregunta que si se desea guardar
+            antes de salir.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.NUD_estilo_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando cambia el valor del estilo de linea,
+            guardando el nuevo valor.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_rotar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Se selecciona la opcion para rotar las figuras.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.rotarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona la opcion para rotar las figuras.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_paletares_Click(System.Object,System.EventArgs)">
+            <summary>
+            Restaura la paleta de colores principal (Regresa a la primera paleta).
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_rotar_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse esta sobre el boton de seleccion de Rotar Figura.
+            Se cambia la imagen para dar un efecto de selección.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.BT_rotar_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Se produce cuando el mouse ya no esta sobre el boton de seleccion de Rotar Figura.
+            Reestablece la imagen original.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.guardarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Guarda el dibujo cuando se seleccione la opcion "Guardar" en el
+            menú.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.abrirToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre un dibujo con extencion *.g2d y lo dibuja en pantalla.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.Form1_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Verifica si se ha guardado el dibujo antes de cerrar el programa,
+            y da al usuario las opciones para guardar el dibujo.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.acercaDeToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Muestra el cuadro de dialogo con información del programa
+            al presionarse la opcion "Acerca de..." en el menu "?".
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Editor_Graficación_2D.Principal.components">
+            <summary>
+            Variable del diseñador requerida.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén utilizando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario, false.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Principal.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido del método con el editor de código.
+            </summary>
+        </member>
+        <member name="T:Editor_Graficación_2D.Elipse">
+            <summary>
+            Clase para crear, manipular y dibujar una Elipse.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Elipse._ra">
+            <summary>
+            Guarda el Radio A de la Elipse.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Elipse._rb">
+            <summary>
+            Guarda el Radio B de la Elipse
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Elipse._origen">
+            <summary>
+            Guarda las coordenadas del origen de la Elipse.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Elipse._pf">
+            <summary>
+            Guarda el punto final de la Elipse.
+            Se utiliza para calcular los radios.
+            </summary>
+        </member>
+        <member name="F:Editor_Graficación_2D.Elipse.angulo">
+            <summary>
+            Guarda el ángulo de rotación de la Elipse.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Elipse.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            Contructor de la Clase Elipse
+            </summary>
+            <param name="XI">Coordenada X inical del Origen.</param>
+            <param name="YI">Coordenada Y inical del Origen.</param>
+            <param name="XF">Coordenada X Final.</param>
+            <param name="YF">Coordenada Y Final.</param>
+            <param name="Color">Color de la Elipse.</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Elipse.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="PI">Punto inicial de la Elipse (Origen).</param>
+            <param name="PF">Punto final de la Elipse.</param>
+            <param name="Color">Color de la Elipse.</param>
+            <param name="Ancho">Ancho de la Linea.</param>
+        </member>
+        <member name="M:Editor_Graficación_2D.Elipse.CalculaPixeles">
+            <summary>
+            Calcula los pixeles que componen la elipse.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Elipse.Dibuja">
+            <summary>
+            Dibuja los pixeles que componene la Elipse.
+            </summary>
+        </member>
+        <member name="M:Editor_Graficación_2D.Elipse.PointInFig(System.Drawing.Point,System.Int32)">
+            <summary>
+            Checa si un punto esta en la figura.
+            </summary>
+            <param name="pt">Punto a checar.</param>
+            <param name="range">Rango de alcanze</param>
+            <returns>1 si el punto esta cerca ó en el origen o 2 si el punto
+            esta en la circunferencia.</returns>
+        </member>
+        <member name="M:Editor_Graficación_2D.Elipse.ClearPixeles">
+            <summary>
+            Borra la lista de pixeles que componen la elipse.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Elipse.Radio">
+            <summary>
+            Establece los nuevos radios para la Elipse. El radio A se encuentra en 
+            la componente X del punto y el radio B en la componente Y.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Elipse.RadioA">
+            <summary>
+            Obtiene o estable el radio A (radio en X) de la Elipse.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Elipse.RadioB">
+            <summary>
+            Obtiene o establece el radio B (radio en Y) de la Elipse.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Elipse.Origen">
+            <summary>
+            Obtiene o establece el origen de la Elipse.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Elipse.AnguloRotacion">
+            <summary>
+            Obtiene o establece el angulo de rotacion de la elipse.
+            </summary>
+        </member>
+        <member name="P:Editor_Graficación_2D.Elipse.Pixeles">
+            <summary>
+            Obtiene la lista de pixeles que componen la Elipse.
+            </summary>
+        </member>
+    </members>
+</doc>

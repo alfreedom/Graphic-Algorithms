@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13E9F1BA-7802-4065-8800-E246F5B3C757}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Editor_Graficación_2D</RootNamespace>
+    <AssemblyName>Editor Graficación 2D</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\Editor Graficación 2D.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Tao.OpenGl.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Platform.Windows, Version=1.0.0.5, Culture=neutral, PublicKeyToken=701104b2da67a104, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Tao.Platform.Windows.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Circulo.cs" />
+    <Compile Include="DialogRotar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogRotar.Designer.cs">
+      <DependentUpon>DialogRotar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elipse.cs" />
+    <Compile Include="Figura.cs">
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Linea.cs">
+    </Compile>
+    <Compile Include="Pixel.cs">
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Curva.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogRotar.resx">
+      <DependentUpon>DialogRotar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change_select_color.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_predeterminado.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gotero_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gotero_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invert_color.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_5.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_6.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_7.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_8.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_9.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_11.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_default.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paleta_lateral.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poligon_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixel_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixel_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha_der.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha_izq.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chagecolor_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chagecolor_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor_changecolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellipse_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellipse_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bezier_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bezier_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app_icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotar_select.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotar_unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <None Include="Resources\bg_profile.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,10 @@
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D\Editor Graficación 2D\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D\Editor Graficación 2D\obj\Debug\Editor_Graficación_2D.Form1.resources
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D\Editor Graficación 2D\obj\Debug\Editor_Graficación_2D.Properties.Resources.resources
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D\Editor Graficación 2D\obj\Debug\Editor Graficación 2D.csproj.GenerateResource.Cache
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D\Editor Graficación 2D\bin\Debug\Editor Graficación 2D.exe
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D\Editor Graficación 2D\bin\Debug\Editor Graficación 2D.pdb
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D\Editor Graficación 2D\obj\Debug\Editor Graficación 2D.exe
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D\Editor Graficación 2D\obj\Debug\Editor Graficación 2D.pdb
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\Editor Graficación 2D.exe
+C:\Users\Alfredo\Documents\Programacion Visual Orozco\C #\Editor Graficación 2D OPENGL\Editor Graficación 2D\obj\Debug\Editor Graficación 2D.pdb

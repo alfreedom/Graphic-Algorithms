@@ -1,0 +1,14 @@
+
+*********************************ROTACIONES************************
+
+
+public Point RotaPunto(Point Puntoarotar,Point PuntoPibote, int angulo)
+{
+	double g = (angulo * 3.1516) / 180;
+	Point p= new Point();
+	p.X = (int)(Math.Cos(g) * Puntoarotar.X + (-Math.Sin(g) * Puntoarotar.Y) + (PuntoPibote.X * (1 - Math.Cos(g)) + (PuntoPibote.Y * Math.Sin(g))));
+	p.Y = (int)(Math.Sin(g) * Puntoarotar.X + ( Math.Cos(g) * Puntoarotar.Y) + (PuntoPibote.Y * (1 - Math.Cos(g)) - (PuntoPibote.X * Math.Sin(g))));
+
+	return p;
+
+}
